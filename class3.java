@@ -1,5 +1,4 @@
-Aissawi 2, [10.11.21 23:52]
-package tp1;
+package com.company;
 
 import java.io.*;
 import java.util.Scanner;

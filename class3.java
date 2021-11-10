@@ -10,28 +10,24 @@ public class Class4 {
         // TODO Auto-generated method stub
 
 
-        Employee [] Empls = null;
-        FileInputStream fileIn = new FileInputStream("C:\\Users\\Life Book\\IdeaProjects\\PJA\\emp.dat");
+        Employee [] Employees= null;
+        FileInputStream fileIn = new FileInputStream("C:\\Users\\ASUS\\IdeaProjects\\PJA\\emp.dat");
         ObjectInputStream in = new ObjectInputStream(fileIn);
-        Empls = (Employee []) in.readObject();
+        Employees= (Employee []) in.readObject();
         in.close();
         fileIn.close();
 
 
-        String err = null;
         Scanner sc = new Scanner(System.in);
-        System.out.println("Svp Tappez le numero de l'Employe :");
-        int nmbrEmp = sc.nextInt();
+        System.out.println("Enter The Employee Number");
+        int nbr= sc.nextInt();
 
-        for (int i = 0; i < Empls.length; i++) {
-            if (Empls[i].number == nmbrEmp) {
-                System.out.println("Les informations de l'employe: \n");
-                System.out.println("Name : " + Empls[i].name + "\n" + Empls[i].address + "\n" + Empls[i].SSN + "\n" + Empls[i].number + "\n");
-            }else{
-                err = "Le numero n'exist pas";
+        for (int i = 0; i < Employees.length; i++) {
+            if (Employees[i].number == nbr) {
+                System.out.println("The employe Imnformations: \n");
+                System.out.println("Name : " + Employees[i].name + "\n" + Employees[i].address + "\n" + Employees[i].SSN + "\n" + Employees[i].number + "\n");
             }
         }
-        System.out.println(err);
 
     }
 
